@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: finmindworkflow
+  name: finmindworkflow2
   labels:
-    app: finmindworkflow
+    app: finmindworkflow2
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1724751141501
+  namespace: namespace-workflow-1724751801093
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: finmindworkflow
+      app: finmindworkflow2
   template:
     metadata:
       labels:
-        app: finmindworkflow
+        app: finmindworkflow2
     spec:
       containers:
-        - name: finmindworkflow
-          image: finbotreg.azurecr.io/image-workflow-1724751141501-img:latest
+        - name: finmindworkflow2
+          image: acrworkflow1724751801093.azurecr.io/image-workflow-1724751801093:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
