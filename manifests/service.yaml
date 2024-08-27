@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: finmindworkflow2
-  namespace: namespace-workflow-1724751801093
+  name: finmindworkflow3
+  namespace: namespace-workflow-1724752196146
   labels:
     kubernetes.azure.com/generator: devhub
 spec:
   type: LoadBalancer
   selector:
-    app: finmindworkflow2
+    app: finmindworkflow3
   ports:
     - protocol: TCP
       port: 5000
